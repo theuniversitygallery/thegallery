@@ -1,0 +1,87 @@
+2024-05-26	 08:35:30	2b5be499-b88a-4004-8ae6-936abdee3e55	 Error : Error
+2024-05-26	 08:36:51	99aa5ffd-fa6e-49a7-9b51-8b55db5d6ae0	 Error : Error
+2024-05-26	 08:36:53	c54112f6-4b43-4b4d-912b-b1fde423432c	 Error : Error
+2024-05-26	 08:38:01	8235d5cf-c62e-4581-9ca6-e08e40f753fa	 Error : Error	Error: Not allowed by CORS
+2024-05-26	 08:39:10	469bd4bf-4245-4c90-a375-515c0d57c9de	 Error : Not allowed by CORS
+2024-05-26	 08:39:13	bb66ef03-3b85-42ea-8749-b1c261415330	 Error : Not allowed by CORS
+2024-05-26	 22:28:24	3cc3d138-95ff-4e18-88e3-418946e8182f	 ReferenceError : userData is not defined
+2024-06-19	 16:49:36	310c5422-55e8-40d3-9481-9f87891fd52c	 Error : Not allowed by CORS
+2024-06-21	 18:25:19	43c622e5-48a6-4126-9e2d-6ae6cb8929f9	 SyntaxError : Unterminated fractional number in JSON at position 14
+2024-06-25	 23:22:21	12b9135b-de65-49e1-95e0-4cf33e7a4f57	 Error : Cannot set headers after they are sent to the client
+2024-06-25	 23:30:45	14e4bc48-6c4e-4ac2-9837-13513498137c	 Error : Cannot set headers after they are sent to the client
+2024-06-25	 23:50:33	320ea6f9-f874-4798-b2d7-7b99c79f789e	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 00:01:34	bb86e427-dc6e-4102-9c45-7380761834ce	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 00:01:53	716ec322-030c-4c10-931e-91a9925b8ba6	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 00:02:38	cf8bde11-bc37-4992-b7c8-5f759347fb99	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 00:04:48	135aeb80-081c-4f7e-9a33-2268a7958e32	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 00:12:00	8c202a4f-711d-4a62-a742-b908a104844a	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 00:18:46	7127a32b-e9ae-4f37-ad9f-92de9ec8bc00	 TypeError : jsonData.find is not a function
+2024-06-26	 00:24:35	b8056efe-2a77-48df-aba3-b1949f39b4bb	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 00:25:31	f7147449-4ff9-42b3-b5b4-2bb23057386e	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 00:25:41	01e85996-fb13-4491-9ee8-8bd6b5efc1cb	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 00:25:45	11a4d6a2-93ff-432f-a207-34dab85126e0	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 13:31:42	97ecc37a-acef-430b-ab65-d9716b2f53eb	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 13:34:00	7609eb71-0cce-4d0c-9a6c-a9c193cee692	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 13:34:05	79aa486e-bbe1-4ee7-ad6c-9acfd41b6bb6	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 13:34:08	28b729ac-c4a0-4a28-bd85-113c859befbc	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 13:34:10	0a3126c3-b711-4a60-aefc-c6c5b4334fc1	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 13:35:16	0f2c2939-379c-402e-870c-e89044e28003	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 13:35:21	23013c9d-905c-43e9-bd0f-2b47a67c6ad9	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 13:35:52	147db51c-4b5f-41be-96dc-4cef90ee6430	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 13:35:57	c2fa4f49-342d-4f62-9e9a-a3096ef41e18	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 15:24:34	6e063ee6-a126-40d4-87f0-838fbcec07b4	 ReferenceError : content is not defined
+2024-06-26	 15:25:50	e9c054b3-39bd-4b84-9088-55903ac1a91d	 Error : Cannot set headers after they are sent to the client
+2024-06-26	 18:31:35	45e3b912-5346-400e-bb40-5786b0218a14	 ReferenceError : data is not defined
+2024-06-26	 18:48:40	179da668-2b26-4c83-ad48-e9855a89ff94	 TypeError : Cannot read properties of undefined (reading '1')
+2024-06-26	 18:55:30	bbf7eda0-ca26-4e28-ab41-7f889da1f9ad	 RangeError : Invalid status code: 0
+2024-06-26	 18:55:37	4af4ccbd-3d2b-418e-9279-6acd9e0d3ebc	 RangeError : Invalid status code: 1
+2024-06-26	 18:55:42	bfff8ca4-a2f2-41c7-92f1-5db556a9aa75	 RangeError : Invalid status code: 0
+2024-06-26	 18:56:15	4a293660-5e3c-4927-8527-b6afca68c79d	 RangeError : Invalid status code: 0
+2024-06-27	 15:45:47	8ddcd0bf-485b-4143-9c9f-921e337831ed	 TypeError : validateResult is not a function
+2024-06-27	 15:46:28	0993938f-bf71-4319-9a84-5aacfe15e1b3	 ReferenceError : userData is not defined
+2024-06-28	 11:01:02	3474da93-5ec2-4f59-86b4-12ad62454051	 Error : Not allowed by CORS
+2024-06-28	 11:01:52	0aedb169-022a-421f-aaa1-6467b504ff34	 Error : Not allowed by CORS
+2024-06-28	 14:42:37	72f9189d-035e-4fa7-8267-18c8c81dab94	 Error : Not allowed by CORS
+2024-06-28	 20:54:13	fd65b0e9-b5f4-4cdf-bc77-7d859b30e4fd	 Error : 
+2024-06-28	 20:59:32	591bdea5-a164-49be-a9ab-8a20553058f1	 Error : 
+2024-06-28	 21:06:41	d4fd6974-80f0-48f3-8f7b-f51038fd241f	 Error : 
+2024-06-28	 21:06:45	a23aeee6-8640-4005-9b24-8c7f1ae61d1e	 Error : 
+2024-06-28	 21:06:50	39dbdda6-d4ac-49d0-8a8e-83c3cd919526	 Error : 
+2024-06-28	 21:07:22	bf7983ab-905a-4b73-aea6-7d346ed43735	 Error : 
+2024-06-29	 12:55:06	185708c3-1047-43ae-9e56-e0920252ebbd	 Error : 
+2024-06-29	 12:56:21	576b14f0-ce96-45a5-b2bd-c3e433e0eca7	 Error : 
+2024-06-29	 12:56:46	167c0803-0fb9-4a0e-abb9-87d8bec0fb2b	 Error : 
+2024-07-03	 13:15:42	9e037b58-8561-4640-8b6d-a85ae5126f0d	 TypeError : Cannot set properties of undefined (setting 'visited')
+2024-07-03	 13:27:25	79250b2e-d757-43c1-8d24-8fe91a9e59b9	 Error : Cannot set headers after they are sent to the client
+2024-07-03	 13:27:56	c0d09bf2-c5d5-4d07-a0d0-2020e240502c	 Error : Cannot set headers after they are sent to the client
+2024-07-03	 13:28:28	9e94d6ba-3918-4f6a-859b-b139fb74631f	 Error : Cannot set headers after they are sent to the client
+2024-07-03	 13:28:56	62cd3843-cbb7-465f-951a-9194ae6ea168	 Error : Cannot set headers after they are sent to the client
+2024-07-03	 16:38:06	eeae96e1-41de-45fa-a552-9bf93a9c56ba	 ReferenceError : sessionStorage is not defined
+2024-07-04	 00:50:54	b196bbae-e9fe-4200-a927-891f9152350f	 SyntaxError : Expected double-quoted property name in JSON at position 152
+2024-07-04	 00:52:01	50edadf1-9543-4864-9aec-61c23890c4e1	 SyntaxError : Expected double-quoted property name in JSON at position 152
+2024-07-04	 23:12:08	5f4aa915-f5b6-4f73-9c5c-2270887ec4a1	 SyntaxError : Expected double-quoted property name in JSON at position 71
+2024-07-12	 16:39:07	536db50b-323b-41bd-a221-8321b1a706fc	 Error : Cannot set headers after they are sent to the client
+2024-07-12	 16:39:13	2a50c67b-c9a1-4800-be15-226d67dc1176	 Error : Cannot set headers after they are sent to the client
+2024-07-12	 16:39:18	ee856f50-2fe7-4fb8-a94a-a8ae7c76c691	 Error : Cannot set headers after they are sent to the client
+2024-07-12	 16:40:09	d6b38ef7-2ed0-4c0e-9556-d608073368dc	 Error : Cannot set headers after they are sent to the client
+2024-07-12	 16:41:21	c05bae63-c8ea-4014-a374-1d988a3a183f	 Error : Cannot set headers after they are sent to the client
+2024-07-17	 10:44:01	daa4d41b-84c9-4eac-beba-6944d1b2ba48	 ReferenceError : da is not defined
+2024-07-17	 12:14:40	685eb0aa-d359-49fc-8a1e-c269706e74b3	 TypeError : Cannot read properties of undefined (reading 'find')
+2024-07-27	 14:40:29	2e738d7c-b069-4986-b3c3-578c3f98f854	 TypeError : Cannot read properties of undefined (reading 'citizenName')
+2024-09-17	 16:41:54	de1ea12f-ad43-4c17-a396-58cb1d7d268a	 SyntaxError : Unexpected token '"', " "eyJhbGciO"... is not valid JSON
+2024-09-17	 16:42:11	f5f8d98e-adb5-472d-a64d-6ccdd8124745	 SyntaxError : Unexpected token '"', " "eyJhbGciO"... is not valid JSON
+2024-09-17	 16:42:56	860239ea-f6b7-4f3f-9e6f-d162db2780c9	 SyntaxError : Unexpected token '"', " "eyJhbGciO"... is not valid JSON
+2024-09-17	 16:43:27	154a0e6b-8fd6-4c4d-a6d4-59c945417b0d	 SyntaxError : Unexpected token '"', " "eyJhbGciO"... is not valid JSON
+2024-09-17	 16:43:39	2eb6bbfe-3370-4f2d-9983-21b4c9447de3	 SyntaxError : Unexpected token '"', " "eyJhbGciO"... is not valid JSON
+2024-09-17	 16:43:43	50168a1d-86c0-4ae1-ab21-14e8628ef9cc	 SyntaxError : Unexpected token '"', " "eyJhbGciO"... is not valid JSON
+2024-09-17	 16:44:08	18138ee1-c11d-47b0-867f-f6f144cd3e99	 SyntaxError : Unexpected token 'e', "eyJhbGciOi"... is not valid JSON
+2024-09-17	 16:44:20	28533544-e2a7-4b0b-a12b-b1cea6b0804d	 SyntaxError : Unexpected token '"', ""eyJhbGciO"... is not valid JSON
+2024-09-17	 16:45:35	6e534148-96f9-4583-8087-c94546e1059e	 SyntaxError : Unexpected token '"', " "eyJhbGciO"... is not valid JSON
+2024-09-17	 16:45:39	acddabf0-d107-4cf3-98a7-3c22cd6bab1d	 SyntaxError : Unexpected token '"', " "eyJhbGciO"... is not valid JSON
+2024-09-17	 16:45:45	e9bef00e-b6ea-4469-bcde-0cee023adf13	 SyntaxError : Unexpected token '"', " "eyJhbGciO"... is not valid JSON
+2024-09-17	 16:47:30	88e9793b-1201-4d35-a322-96d97a3bf027	 SyntaxError : Unexpected token '"', ""eyJhbGciO"... is not valid JSON
+2024-12-13	 14:06:09	9442000d-78b5-4690-b8e8-6f1ad608db2d	 Error : Not allowed by CORS
+2024-12-13	 14:38:03	8368154d-228c-4f73-9134-4c3520bc5b17	 Error : Not allowed by CORS
+2024-12-13	 16:12:32	73a25d34-e964-41d9-8eb5-242d6f2bcca2	 Error : Not allowed by CORS
+2024-12-13	 16:18:08	c8c0d3d0-5dbf-4b60-9d01-93430970c88d	 Error : Not allowed by CORS
+2024-12-13	 16:18:13	a602b3e0-725e-483e-8723-83a835473c15	 Error : Not allowed by CORS

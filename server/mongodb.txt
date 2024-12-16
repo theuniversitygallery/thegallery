@@ -1,0 +1,64 @@
+pipeline stages
+
+source collection
+    |
+1 - match
+    |
+intermediate Dataset
+
+intermediate Dataset
+2 - group
+    |
+intermediate Dataset
+
+combination
+
+source collection
+        |    
+1.     match
+        |
+2.     group
+        |    
+final result
+
+------------------------
+for the explore page  
+-- what user suppose to see
+---- base on user location 
+---- get all post created in the location  
+------ check to see if one or more of user interest from array is in any of post 
+------ if no match , post made in the location
+
+-1 decending order
+1 ascending order
+[
+    {
+        $group:
+            _id:"$status",
+            count: {
+                $sum: 1
+            },
+    },
+    {
+        $sort: {
+            count: -1 
+        }
+    }
+]
+
+group all student and sort them by ascending
+[
+    {
+        $group:{
+            _id: "$citizen.location.country"
+            userCount:{
+                $sum: 1
+            }
+        }
+    }, 
+    {
+        $sort:{
+            userCount: 1
+        }
+    }
+]

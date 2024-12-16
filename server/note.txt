@@ -1,0 +1,59 @@
+
+https://www.youtube.com/playlist?list=PLuHGmgpyHfRyL233CDEALV1BN6Xwqwb99
+https://youtu.be/mYCpclKeCrs?si=6FacJf-xS8TRrK1x socket .io
+
+download this npm to convert timestamp to africa timeszone
+npm install moment-timezone
+
+https://www.youtube.com/watch?v=favjC6EKFgw&t=2983s 51:52
+
+npms needed when creating a website
+
+
+1. cookieParser
+2. create cookie as a middleware to store user activities
+3. use cookies to store the last page address when redirection user to login or signup page
+4. used signcookie to encode the cookie and use signedcookies to access it
+
+signup process
+1. import database
+2. import fs system with anothe fspromises
+3. download bcrypt npm for password hashing
+4. import express - validator (matcheddata, validationResult)
+5. import path 
+
+create method name signup with (request, responds, oprtional next)
+    define validated validationResult
+    check if the result is not Emtpty() and sendStatus 400 . send ({errors: result.array()})
+
+    defined the data to be matcheddata from request()
+    destract the data
+    file path
+
+    using try and catch block
+    check for lastId and increase it
+    check for duplicated username 
+    check if passcode is the same as retry passcode
+    hash the password using bcrypt
+    
+    create a mockup of how you want json to look like
+    place the mockup into data push
+    write it into the file system
+
+
+    "citizenName": "Kantanka", 
+     "citizenEmail": "email@email.com",
+     "passCode": "simple345",
+     "confirmPwd": "simple345",
+     "status": "company"
+
+Sign IN 
+    1. function or method (called what every) login (request, responds, next)
+    2. 
+
+
+"citizenName":"James",
+"citizenEmail":"James@email.com",
+"passCode":"James125",
+"confirmPwd":"James125",
+"status":"company"
