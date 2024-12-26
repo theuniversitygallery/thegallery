@@ -15,7 +15,7 @@ const validateContent = [
   body('color').isHexColor().withMessage('Color must be a valid hex color'),
   body('tags').isArray().withMessage('Tags must be an array'),
   body('category').optional().isString().withMessage('Category must be a string'),
-  body('ipAddress').optional().isString().withMessage('IP Address must be a string'),
+  // body('ipAddress').optional().isString().withMessage('IP Address must be a string'),
   body('location').custom(value => {
     const { longitude, latitude } = value;
     if (typeof longitude !== 'number' || longitude < -180 || longitude > 180) {
@@ -26,6 +26,7 @@ const validateContent = [
     }
     return true;
   }),
+  body("accuracy").notEmpty().isNumeric().withMessage("accuracry is not set"),
   body('comments').optional().isArray().withMessage('Comments must be an array'),
   body('likes').optional().custom(value => {
     if (!Array.isArray(value)) {

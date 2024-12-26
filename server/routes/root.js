@@ -13,7 +13,7 @@ router.use(register); //signed up
 router.use(auth); // login
 router.use(refresh); // refresh token
 
-router.use(verifyJWT);
+router.use(verifyJWT); //verify user before entren
 
 router.use(explore);
 router.use(content);  // create post   

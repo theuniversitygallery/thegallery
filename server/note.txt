@@ -57,3 +57,9 @@ Sign IN
 "passCode":"James125",
 "confirmPwd":"James125",
 "status":"company"
+
+
+steps 
+sign up
+1. select interest 
+2. go to main page | explore {inside the explore show suggested neigbours }

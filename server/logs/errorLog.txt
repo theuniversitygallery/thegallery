@@ -85,3 +85,4 @@
 2024-12-13	 16:12:32	73a25d34-e964-41d9-8eb5-242d6f2bcca2	 Error : Not allowed by CORS
 2024-12-13	 16:18:08	c8c0d3d0-5dbf-4b60-9d01-93430970c88d	 Error : Not allowed by CORS
 2024-12-13	 16:18:13	a602b3e0-725e-483e-8723-83a835473c15	 Error : Not allowed by CORS
+2024-12-26	 09:42:42	11aedf01-f9d6-4355-9c20-47d058e803fc	 SyntaxError : Expected double-quoted property name in JSON at position 27

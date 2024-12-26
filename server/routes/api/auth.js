@@ -10,8 +10,7 @@ router.route("^/$|/auth(.html)?/")
             body("passCode").notEmpty().withMessage("passcode is not correct"),
             body("latitude").notEmpty().isNumeric().withMessage("latitude is not set"),
             body("longitude").notEmpty().isNumeric().withMessage("longitude"),
-            body("accuracy").notEmpty().isNumeric().withMessage("accuracry is not set")
-           
+            body("accuracy").notEmpty().isNumeric().withMessage("accuracry is not set") 
         ],loginController);
 
 module.exports = router;

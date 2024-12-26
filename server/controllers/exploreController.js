@@ -1,36 +1,33 @@
 const { signedCookie } = require("cookie-parser");
 const express = require("express");
-const {validationResult,matchedData} = require("express-validator");
-// const locationController = require('./locationController');
+const {check,validationResult,matchedData} = require("express-validator");
+const {findNearbyCitizens}  = require('../controllers/nearbyCitizen');
+const jwt = require('jsonwebtoken')
 
-const router = express();
+// const { check, validationResult } = require('express-validator');
 
+const getAllPost = async (req, res) => {
+    // validate the request
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(422).json({ errors: errors.array() });
+    }
 
-const getAllPost = (req, res) => {
+    // get the user id from the AccessToken through the middleware
+    const userId = req.userId; 
+    const { longitude, latitude } = req.body;   
 
-    // req.session.user? res.status(200).send(req.session.user) : res.status(401).send({mgs:"not set or bad gate way"})
-
-    // const result = validationResult(req);
-    // const dataMatch = matchedData(req); console.log(dataMatch);
-    // res.cookie("currentPage" , "explorePage", {maxAge: 6000 *24, signed:true});
-    // const {query:{log, mag}} = req; 
-    // req.query object will access user location if the user allow it location. it can be their longitude and their magnitude
-    // if (log && mag) {
-    //     // Filter internships based on the user's location
-    //     findInternshipsByLocation(log,mag)
-    //         .then(internships => {
-    //             res.send(internships);
-    //         })
-    //         .catch(error => {
-    //             res.status(500).send(error);
-    //         });
-    // } else {
-    //     // tell the user to allow location for better experience while we provide global result
-    //     res.send('Please specify your location to see relevant internships.');
-    // }
-
-    // locationController.getNearbyLocations;
-    // res.status(200).json(data.content);
+    if (typeof longitude !== 'number' || typeof latitude !== 'number') {
+        return res.status(400).json({ message: 'Invalid coordinates provided' });
+    }
+    
+    try {
+        // nearbycitizen
+        const nearbyCitizens = await findNearbyCitizens(userId,[longitude,latitude]);
+        res.status(200).json(nearbyCitizens);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 }
 
 
@@ -52,9 +49,8 @@ const getApost = (req, res)=>{
     }catch(err){
         throw(err);
     }
-
-
 }
+
 module.exports = {
     getAllPost,
     getApost

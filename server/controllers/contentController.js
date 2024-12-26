@@ -1,31 +1,51 @@
 const {validationResult, matchedData} = require("express-validator");
 const Content = require('../models/contentModel.js'); 
 const {logEvent} = require("../middleware/logEvents.js") 
-
+const Location = require("../models/locationModel");
 
 //user creating new record
 const newContent = async (req, res) => {
   let result = validationResult(req)
   if(!result.isEmpty()) return res.sendStatus(400).send({errors: result.array() })
+
   const data = matchedData(req);
-  const {citizenID,title,desc,img,color,tags,category,ipAddress,location,comment,likes,status} = data;
+  const {citizenID,title,desc,img,color,tags,category, location,accuracy,comment,likes,status} = data;
   
- 
- try {
-    const contentData = await Content.create({
-      citizenID,title,desc,img,color,tags,category,ipAddress,location,
-      // comment,
-      // likes,
-      status
-    });
-    const insertedId = contentData._id;
-      logEvent(`content with ID: ${contentData._id} created`,"contentLog.txt");
-      res.send(contentData).status(200).json({ message: 'Content uploaded successfully' });
+  // Create a new content location
+  const contentLocation = new Location({
+      location: {
+          type: 'Point',
+          coordinates: [location.longitude, location.latitude]
+      },
+      accuracy: accuracy 
+  });
+
+// Save the contentlocation to the database
+  let savedLocation;
+  try {
+    savedLocation = await contentLocation.save();
     } catch (err) {
       console.error(err)
-      
-      res.status(500).json({ message: 'content was not uploaded successfully' });
+      res.status(500).json({ message: 'Failed to save Location' });
     }
+
+    // create a new content
+    try {
+      const contentData = await Content.create({
+        citizenID,title, desc, img, color, tags, category,
+        originalLocation: savedLocation._id, 
+        currentLocation: savedLocation._id,
+        comment, likes, status
+      });
+
+      return res.status(200).json({ message: 'Content uploaded successfully', data: contentData }); 
+
+    } catch(err) {
+      console.error(err);
+      logEvent(`userID: ${citizenID} | error`, "errorLog.txt");
+      return res.status(500).json({ message: 'Content was not uploaded successfully' }); 
+    }
+
   }
   
   // get user all post
@@ -35,15 +55,13 @@ const newContent = async (req, res) => {
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
       }
-      const data = matchedData(req);
+
       try {
         
         const allContent = await Content.find({ citizenID: req.citizenID }); 
-        res.json(allContent);
-        console.log("done");
+        return res.status(200).json({ message: 'All content retrieved successfully', data: allContent });
       }catch(err){
-        res.status(500).json({ message: err.message });
-        
+        return res.status(500).json({ message: err.message });
       }
       
     }
@@ -56,9 +74,9 @@ const newContent = async (req, res) => {
     if (!conetentByID) {
       return res.status(404).json({ message: 'Record not found or not authorized' });
     }
-    res.json(conetentByID);
+    return res.json(conetentByID);
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    return res.status(500).json({ message: err.message });
   }
   
 };  
@@ -77,7 +95,23 @@ const updateContentByID = async (req,res) =>{
   try {
     const {title,desc,img,color,tags,category} = req.body;
     const {contentId}= req.params;
-    // find content
+
+    // Find the content by ID
+    const content = await Content.findById(contentId);
+    if (!content) {
+      return res.status(404).json({ message: 'Content not found' });
+    }
+
+    // Create a new location for the updated position
+    const newLocation = new Location({
+      location: {
+        type: 'Point',
+        coordinates: [longitude, latitude]
+      },
+      accuracy: accuracy 
+    });
+
+
     const updateContent = await Content.findByIdAndUpdate(contentId,
       {
         title,
@@ -97,16 +131,13 @@ const updateContentByID = async (req,res) =>{
       logEvent(`content with ID: ${updateContent._id} Updated`,"contentLog.txt");
       return res.json(updateContent);
     } catch (error) {
-      res.status(500).json({msg: error.message})
+      return res.status(500).json({msg: error.message})
     }
     
   }
   
   
   
-  
-  
-  // get all post from user
   
    const deletContentByID = (req,res) => {
       validationResult(req).throw();

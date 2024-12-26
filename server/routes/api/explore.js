@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express();
-const { query } = require('express-validator');
+const { query,check } = require('express-validator');
 const {getAllPost,getApost } = require('../../controllers/exploreController')
 const verifyJWT = require('../../middleware/verifyJWT')
 
@@ -8,9 +8,11 @@ const verifyJWT = require('../../middleware/verifyJWT')
 router.route('^/$|/explore(.html)?/')
     .get(
         verifyJWT,
-        query("filter")
-        .notEmpty()
-        .withMessage("must not be empty"),
+        [
+            // check('citizenID').notEmpty().withMessage('Citizen ID must not be empty'),
+            check('longitude').isNumeric().withMessage('Longitude must be a number'),
+            check('latitude').isNumeric().withMessage('Latitude must be a number')
+        ],
         getAllPost
     )
 // search intent by location or interest

@@ -56,3 +56,50 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         alert('Geolocation is not supported by this browser.');
     }
 });
+/*
+function getNearbyLocations(latitude, longitude, distanceInKm) {
+    const earthRadius = 6371; // Radius of the Earth in kilometers
+  
+    // Function to calculate a new latitude/longitude given a distance and bearing
+    function calculateDestination(lat, lon, brng, dist) {
+      const dLat = dist * Math.cos(brng) / earthRadius;
+      const dLon = dist * Math.sin(brng) / earthRadius / Math.cos(lat);
+      const lat2 = lat + dLat * (180 / Math.PI);
+      const lon2 = lon + dLon * (180 / Math.PI);
+      return { latitude: lat2, longitude: lon2 };
+    }
+  
+    // Generate 5 locations around the given location, each 10km apart
+    const nearbyLocations = [];
+    for (let i = 0; i < 5; i++) {
+      const bearing = i * 72; // Divide 360 degrees into 5 equal parts
+      const nearbyLocation = calculateDestination(latitude, longitude, bearing * Math.PI / 180, distanceInKm);
+      nearbyLocations.push(nearbyLocation);
+    }
+  
+    return nearbyLocations;
+  }
+  
+  // Get the user's current location
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+  
+      // Output the user's current location
+      console.log("Your current location:");
+      console.log(JSON.stringify({ latitude, longitude }));
+  
+      // Generate 5 nearby locations
+      const nearbyLocations = getNearbyLocations(latitude, longitude, 10);
+  
+      // Output the nearby locations
+      console.log("Nearby locations:");
+      for (const location of nearbyLocations) {
+        console.log(JSON.stringify(location));
+      }
+    },
+    (error) => {
+      console.error("Error getting location:", error);
+    }
+  );*/

@@ -3,49 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        form {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        input {
-            margin: 10px 0;
-            padding: 10px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px;
-            background: #28a745;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #218838;
-        }
-    </style>
+    <title>User Sign-Up</title>
+    <script src="script/script.js" defer></script>
 </head>
 <body>
+    <h1>Sign Up</h1>
+    <form id="signup-form">
+        <label for="citizenName">Name:</label>
+        <input type="text" id="citizenName" name="citizenName" required><br><br>
+        
+        <label for="citizenEmail">Email:</label>
+        <input type="email" id="citizenEmail" name="citizenEmail" required><br><br>
 
-    <h2>User Login</h2>
-    <form id="loginForm">
-        <input type="text" id="citizenName" placeholder="Citizen Name" required>
-        <input type="password" id="passCode" placeholder="Password" required>
-        <button type="submit">Login</button>
+        <label for="passCode">password:</label>
+        <input type="password" id="passCode" name="passCode" required><br><br>        
+
+        <label for="confirmPwd">confirm password:</label>
+        <input type="password" id="confirmPwd" name="confirmPwd" required><br><br>
+
+        <label>Account Type:</label><br>
+        <input type="radio" id="student" name="status" value="student" required>
+        <label for="student">Student</label><br>
+        <input type="radio" id="company" name="status" value="company">
+        <label for="company">Company</label><br><br>
+        
+        <input type="hidden" id="latitude" name="latitude">
+        <input type="hidden" id="longitude" name="longitude">
+        <input type="hidden" id="accuracy" name="accuracy">
+
+        <button type="button" id="submit-btn">Sign Up</button>
     </form>
-
-    <script src="./script/signup.js"></script>
 </body>
 </html>
